@@ -2,7 +2,8 @@
 # * [x] deal with hardcoded path
 # * [x] the dependency z3
 # * [ ] remove duplicates
-# * [ ] verus as an app (which checks whether verus was build beforehand, otherwise instructs user to call the vargo app)
+# * [ ] verus as an app
+# * [ ] the verus app may call vargo by itself, if needed
 # * [ ] think about command names
 # * [x] vargo as a package (technically doable with a cargo)
 
@@ -17,10 +18,10 @@
 # `nix develop` This will drop you in a shell environment where all dependencies are (should be) available
 #
 # How to call vargo:
-# `cd src && nix run .#vargo-br`
+# `cd src && nix run .#vargo-br` (here, there is no point in passing arguments, as this never needs to be called without the release option.)
 #
 # How to call verus;
-# TODO
+# TODO (plan for future: `nix run .#verus`)
 
 {
   inputs = {
